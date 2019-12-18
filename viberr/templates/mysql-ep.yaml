@@ -1,0 +1,23 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: test
+spec:
+  ports:
+    - port: 3306
+      targetPort: 3306
+      protocol: TCP
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: test
+subsets:
+  - addresses:
+      - ip: 192.168.0.156
+    ports:
+      - port: 3306
+
+

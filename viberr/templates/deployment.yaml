@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-viberr
+  name: test-viberr
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-viberr
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-viberr
+    spec:
+      containers:
+      - image: revolman/viberr:jenkins_v0.1.1
+        name: viberr
+        resources:
+          requests:
+            cpu: 100m
+            memory: 150Mi
+          limits:
+            cpu: 150m
+            memory: 300Mi
+        volumeMounts:
+          - mountPath: "/srv/www/viberr/media/"
+            name: media-volume
+      volumes:
+      - name: media-volume
+        persistentVolumeClaim:
+          claimName: test-env-pvc
+
