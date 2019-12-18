@@ -1,0 +1,15 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  namespace: test
+  name: static-collector
+spec:
+  template:
+    spec:
+      containers:
+      - name: static-collector
+        image: revolman/viberr:jenkins_v0.1.1
+        command: ["python", "manage.py", "collectstatic"]
+      restartPolicy: Never
+  backoffLimit: 4
+
