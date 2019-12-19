@@ -23,7 +23,7 @@ spec:
         app: test-viberr
     spec:
       containers:
-      - image: revolman/viberr:jenkins_v0.1.1
+      - image: revolman/viberr:jenkins_v0.1.3
         name: viberr
         resources:
           requests:
@@ -38,5 +38,4 @@ spec:
       volumes:
       - name: media-volume
         persistentVolumeClaim:
-          claimName: test-env-pvc
-
+          claimName: test-media-pvc
