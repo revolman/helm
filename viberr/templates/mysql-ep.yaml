@@ -2,22 +2,21 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: test
+  namespace: {{ .Values.metadata.namespace }}
 spec:
   ports:
-    - port: 3306
-      targetPort: 3306
+    - port: {{ .Values.Endpoint.ports.port }}
+      targetPort: {{ .Values.Endpoint.ports.port }}
       protocol: TCP
 ---
 kind: Endpoints
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: test
+  namespace: {{ .Values.metadata.namespace }}
 subsets:
   - addresses:
-      - ip: 192.168.0.156
+      - ip: {{ .Values.Endpoint.addresses.ip }}
     ports:
-      - port: 3306
-
+      - port: {{ .Values.Endpoint.ports.port }}
 

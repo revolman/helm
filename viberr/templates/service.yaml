@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
+  creationTimestamp: {{ .Values.metadata.creationTimestamp }}
   labels:
-    app: test-viberr
-  name: test-viberr
-  namespace: test
+    app: "{{ template "app.name" . }}"
+  name: "{{ template "app.name" . }}"
+  namespace: "{{ .Values.metadata.namespace }}"
 spec:
-  type: NodePort
+  type: {{ .Values.service.type }}
   ports:
   - port: 8000
     protocol: TCP
     targetPort: 8000
   selector:
-    app: test-viberr
+    app: "{{ template "app.name" . }}"

@@ -1,14 +1,14 @@
 kind: Job
 apiVersion: batch/v1
 metadata:
-  namespace: test
+  namespace: {{ .Values.metadata.namespace }}
   name: db-migrator
 spec:
   template:
     spec:
       containers:
       - name: db-migrator
-        image: revolman/viberr:jenkins_v0.1.3
+        image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         command: ["/bin/bash","-c"]
         args: ["python manage.py makemigrations --noinput && python manage.py migrate --noinput"]
       restartPolicy: Never

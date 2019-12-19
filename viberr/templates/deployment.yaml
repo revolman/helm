@@ -1,41 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  creationTimestamp: {{ .Values.metadata.creationTimestamp }}
   labels:
-    app: test-viberr
-  name: test-viberr
-  namespace: test
+    app: "{{ template "app.name" . }}"
+  name: "{{ template "app.name" . }}"
+  namespace: {{ .Values.metadata.namespace }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: test-viberr
+      app: "{{ template "app.name" . }}"
   strategy:
     rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
-    type: RollingUpdate
+      maxSurge: {{ .Values.rollingUpdate.maxSurge }}
+      maxUnavailable: {{ .Values.rollingUpdate.maxUnavailable }}
+    type: {{ .Values.strategy.type }}
   template:
     metadata:
-      creationTimestamp: null
+      creationTimestamp: {{ .Values.metadata.creationTimestamp }}
       labels:
-        app: test-viberr
+        app: "{{ template "app.name" . }}"
     spec:
       containers:
-      - image: revolman/viberr:jenkins_v0.1.3
-        name: viberr
+      - image: "{{ .Values.image }}:{{ .Values.imageTag }}"
+        name: {{ .Values.app }}
         resources:
           requests:
-            cpu: 100m
-            memory: 150Mi
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
           limits:
-            cpu: 150m
-            memory: 300Mi
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
         volumeMounts:
           - mountPath: "/srv/www/viberr/media/"
             name: media-volume
       volumes:
       - name: media-volume
         persistentVolumeClaim:
-          claimName: test-media-pvc
+          claimName: {{ .Values.volumes.persistentVolumeClaim.claimName }}

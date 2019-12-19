@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
+  creationTimestamp: {{ .Values.metadata.creationTimestamp }}
   labels:
     app: my-nginx
   name: my-nginx
