@@ -4,8 +4,10 @@ metadata:
   creationTimestamp: {{ .Values.metadata.creationTimestamp }}
   labels:
     app: "{{ template "app.name" . }}"
-  name: "{{ template "app.name" . }}"
-  namespace: {{ .Values.metadata.namespace }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+  name: {{ template "app.name" . }}
+  namespace: {{ .Release.Namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

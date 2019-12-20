@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: {{ .Values.metadata.namespace }}
+  namespace: {{ .Release.Namespace }}
 spec:
   ports:
     - port: {{ .Values.Endpoint.ports.port }}
@@ -13,7 +13,7 @@ kind: Endpoints
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: {{ .Values.metadata.namespace }}
+  namespace: {{ .Release.Namespace }}
 subsets:
   - addresses:
       - ip: {{ .Values.Endpoint.addresses.ip }}
