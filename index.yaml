@@ -2,12 +2,12 @@ apiVersion: v1
 entries:
   viberr:
   - apiVersion: v1
-    appVersion: "1"
-    created: "2019-12-23T13:16:20.885906055+03:00"
+    appVersion: 1.0.1
+    created: "2019-12-23T18:06:55.603613348+03:00"
     description: My first chart for Viberr app
-    digest: e7819f082d3ccb4af2bceb325b903b8007623b7ba1c22f338bc99e5ff49b5dd5
+    digest: a7757450511fe6ad5ba5711840ec393bbc158fd26cc3b003a0900d88af88ac98
     name: viberr
     urls:
-    - https://revolman.github.io/helm/viberr-0.1.0.tgz
-    version: 0.1.0
-generated: "2019-12-23T13:16:20.8854366+03:00"
+    - https://revolman.github.io/helm/viberr-0.1.1.tgz
+    version: 0.1.1
+generated: "2019-12-23T18:06:55.603161299+03:00"

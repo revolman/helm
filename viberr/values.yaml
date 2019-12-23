@@ -42,3 +42,9 @@ Endpoint:
     ip: 192.168.0.156
   ports:
     port: 3306
+
+ConfigMap:
+  host: "mysql"
+  port: "3306"
+  user: "db"
+  name: "db"
