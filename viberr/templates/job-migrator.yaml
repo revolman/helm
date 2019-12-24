@@ -14,22 +14,22 @@ spec:
         env:
           - name: DB_HOST
             valueFrom:
-              confinMapKeyRef:
+              configMapKeyRef:
                 name: db-conf
                 key: DB_HOST
           - name: DB_PORT
             valueFrom:
-              confinMapKeyRef:
+              configMapKeyRef:
                 name: db-conf
                 key: DB_PORT
           - name: DB_USER
             valueFrom:
-              confinMapKeyRef:
+              configMapKeyRef:
                 name: db-conf
                 key: DB_USER
           - name: DB_NAME
             valueFrom:
-              confinMapKeyRef:
+              configMapKeyRef:
                 name: db-conf
                 key: DB_NAME
           - name: DB_PASS
