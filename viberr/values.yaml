@@ -1,8 +1,8 @@
 image: "revolman/viberr"
-imageTag: "jenkins_v0.1.3"
+imageTag: "1.0.3"
 app: viberr
 
-replicaCount: 1
+replicaCount: 3
 
 metadata:
   namespace: test
