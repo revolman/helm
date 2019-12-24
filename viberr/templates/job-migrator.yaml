@@ -11,5 +11,31 @@ spec:
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         command: ["/bin/bash","-c"]
         args: ["python manage.py makemigrations --noinput && python manage.py migrate --noinput"]
-      restartPolicy: Never
+        env:
+          - name: DB_HOST
+            valueFrom:
+              confinMapKeyRef:
+                name: db-conf
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              confinMapKeyRef:
+                name: db-conf
+                key: DB_PORT
+          - name: DB_USER
+            valueFrom:
+              confinMapKeyRef:
+                name: db-conf
+                key: DB_USER
+          - name: DB_NAME
+            valueFrom:
+              confinMapKeyRef:
+                name: db-conf
+                key: DB_NAME
+          - name: DB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: db-passwd
+                key: DB_PASS
+      restartPolicy: Never           
   backoffLimit: 4
