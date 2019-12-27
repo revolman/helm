@@ -2,8 +2,17 @@ apiVersion: v1
 entries:
   viberr:
   - apiVersion: v1
+    appVersion: 1.0.8
+    created: "2019-12-27T17:39:09.991811625+03:00"
+    description: My first chart for Viberr app
+    digest: 1f608c583ac1f113ea2d57ed40effdd8897f3afeb0f9cff07fa18cbec9c1f8c4
+    name: viberr
+    urls:
+    - https://revolman.github.io/helm/viberr-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v1
     appVersion: 1.0.7
-    created: "2019-12-27T14:54:38.576597289+03:00"
+    created: "2019-12-27T17:39:09.991419643+03:00"
     description: My first chart for Viberr app
     digest: 672267ee88def2f704740759e63963701288e35a97978bedf2c0d897778babac
     name: viberr
@@ -12,7 +21,7 @@ entries:
     version: 0.1.5
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2019-12-27T14:54:38.576216722+03:00"
+    created: "2019-12-27T17:39:09.990879924+03:00"
     description: My first chart for Viberr app
     digest: a53e472f29a3a990e9891d547a2df1e2117dc9eaabde5cffe88ddf9a741dc937
     name: viberr
@@ -21,7 +30,7 @@ entries:
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2019-12-27T14:54:38.574794728+03:00"
+    created: "2019-12-27T17:39:09.990361968+03:00"
     description: My first chart for Viberr app
     digest: b11211bbf9ddfa975ad4fcb7633c9b1d72418b907bbdf3a60ae061b81ae8c700
     name: viberr
@@ -30,7 +39,7 @@ entries:
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2019-12-27T14:54:38.574291585+03:00"
+    created: "2019-12-27T17:39:09.989834177+03:00"
     description: My first chart for Viberr app
     digest: e561c15e37b07164bbedb22c7a9aa085f0dcf55a51395a1995244603d510c50e
     name: viberr
@@ -39,11 +48,11 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.0.1
-    created: "2019-12-27T14:54:38.573810906+03:00"
+    created: "2019-12-27T17:39:09.989311649+03:00"
     description: My first chart for Viberr app
     digest: d59c951e133d4291697275bdf9f542fcc8f07aa314161b7b838c5f2e07acdab8
     name: viberr
     urls:
     - https://revolman.github.io/helm/viberr-0.1.1.tgz
     version: 0.1.1
-generated: "2019-12-27T14:54:38.573200196+03:00"
+generated: "2019-12-27T17:39:09.988707617+03:00"
