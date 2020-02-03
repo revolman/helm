@@ -1,0 +1,39 @@
+ConfigMap:
+  host: mysql
+  name: db
+  port: "3306"
+  user: db
+Endpoint:
+  addresses:
+    ip: 192.168.0.156
+  ports:
+    port: 3306
+HostName: site-1.szlk.lan
+accessModes: ReadWriteMany
+app: viberr
+image: revolman/viberr
+imageTag: 1.0.3
+metadata:
+  creationTimestamp: null
+  namespace: staging
+replicaCount: 3
+resources:
+  limits:
+    cpu: 150m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 150Mi
+rollingUpdate:
+  maxSurge: 1
+  maxUnavailable: 0
+service:
+  type: NodePort
+storageClassName: managed-nfs-storage
+storageSize:
+  storage: 200Mi
+strategy:
+  type: RollingUpdate
+volumes:
+  persistentVolumeClaim:
+    claimName: test-media-pvc

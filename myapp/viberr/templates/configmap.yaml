@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: {{ .Values.metadata.creationTimestamp }}
+  name: db-conf
+  namespace: {{ .Values.metadata.namespace }}
+data:
+  DB_HOST: "{{ .Values.ConfigMap.host }}"
+  DB_PORT: "{{ .Values.ConfigMap.port }}"
+  DB_USER: "{{ .Values.ConfigMap.user }}"
+  DB_NAME: "{{ .Values.ConfigMap.name }}"

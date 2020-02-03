@@ -1,0 +1,41 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  namespace: {{ .Release.Namespace }}
+  name: db-migrator
+spec:
+  template:
+    spec:
+      containers:
+      - name: db-migrator
+        image: "{{ .Values.image }}:{{ .Values.imageTag }}"
+        command: ["/bin/bash","-c"]
+        args: ["python manage.py makemigrations --noinput && python manage.py migrate --noinput"]
+        env:
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf
+                key: DB_PORT
+          - name: DB_USER
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf
+                key: DB_USER
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf
+                key: DB_NAME
+          - name: DB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: db-passwd
+                key: DB_PASS
+      restartPolicy: Never           
+  backoffLimit: 4
