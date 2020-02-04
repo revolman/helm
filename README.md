@@ -28,6 +28,7 @@ helm repo add <repo_name> <url>
 helm repo update
 ```
 url: https://revolman.github.io/helm
+
 2. Установка из репозиторий
 ```
 helm install viberr my-helm/viberr
