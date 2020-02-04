@@ -3,74 +3,74 @@ entries:
   viberr:
   - apiVersion: v1
     appVersion: 1.0.10
-    created: "2020-02-04T10:59:34.230370164+03:00"
+    created: "2020-02-04T13:54:28.786531731+03:00"
     description: My first chart for Viberr app
     digest: c0a8edf0ac499c62ed26912e905650d93535f9b8352dcefe3d91b8ad4ec5194f
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.8.tgz
+    - https://revolman.github.io/helm/viberr-0.1.8.tgz
     version: 0.1.8
   - apiVersion: v1
     appVersion: 1.0.9
-    created: "2020-02-04T10:59:34.229793162+03:00"
+    created: "2020-02-04T13:54:28.786148303+03:00"
     description: My first chart for Viberr app
     digest: 4301fa2abeaf6c078976941bea01c12492075513edab124470508cb825064b8e
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.7.tgz
+    - https://revolman.github.io/helm/viberr-0.1.7.tgz
     version: 0.1.7
   - apiVersion: v1
     appVersion: 1.0.8
-    created: "2020-02-04T10:59:34.229238429+03:00"
+    created: "2020-02-04T13:54:28.785780149+03:00"
     description: My first chart for Viberr app
     digest: 1f608c583ac1f113ea2d57ed40effdd8897f3afeb0f9cff07fa18cbec9c1f8c4
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.6.tgz
+    - https://revolman.github.io/helm/viberr-0.1.6.tgz
     version: 0.1.6
   - apiVersion: v1
     appVersion: 1.0.7
-    created: "2020-02-04T10:59:34.22886803+03:00"
+    created: "2020-02-04T13:54:28.78534548+03:00"
     description: My first chart for Viberr app
     digest: 672267ee88def2f704740759e63963701288e35a97978bedf2c0d897778babac
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.5.tgz
+    - https://revolman.github.io/helm/viberr-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2020-02-04T10:59:34.228491766+03:00"
+    created: "2020-02-04T13:54:28.784975401+03:00"
     description: My first chart for Viberr app
     digest: a53e472f29a3a990e9891d547a2df1e2117dc9eaabde5cffe88ddf9a741dc937
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.4.tgz
+    - https://revolman.github.io/helm/viberr-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2020-02-04T10:59:34.228143586+03:00"
+    created: "2020-02-04T13:54:28.784633104+03:00"
     description: My first chart for Viberr app
     digest: b11211bbf9ddfa975ad4fcb7633c9b1d72418b907bbdf3a60ae061b81ae8c700
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.3.tgz
+    - https://revolman.github.io/helm/viberr-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2020-02-04T10:59:34.227799244+03:00"
+    created: "2020-02-04T13:54:28.784294371+03:00"
     description: My first chart for Viberr app
     digest: e561c15e37b07164bbedb22c7a9aa085f0dcf55a51395a1995244603d510c50e
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.2.tgz
+    - https://revolman.github.io/helm/viberr-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
     appVersion: 1.0.1
-    created: "2020-02-04T10:59:34.22745292+03:00"
+    created: "2020-02-04T13:54:28.783957595+03:00"
     description: My first chart for Viberr app
     digest: d59c951e133d4291697275bdf9f542fcc8f07aa314161b7b838c5f2e07acdab8
     name: viberr
     urls:
-    - https://revolman.gitlab.io/helm/viberr-0.1.1.tgz
+    - https://revolman.github.io/helm/viberr-0.1.1.tgz
     version: 0.1.1
-generated: "2020-02-04T10:59:34.227000922+03:00"
+generated: "2020-02-04T13:54:28.783507524+03:00"
