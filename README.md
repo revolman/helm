@@ -9,9 +9,13 @@
 }
 ```
 2. Запаковать чарт
-```helm package viberr```
+```
+helm package viberr
+```
 3. Перейти на GitHub, в разделе settings нужного репозитория найти Github Pages, взять url
-```https://revolman.github.io/helm```
+```
+https://revolman.github.io/helm
+```
 4. Проиндексировать репозиторий. Cоздастся файл index.yaml. Запушить репозиторий.
 ```
 {
